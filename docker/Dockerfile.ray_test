@@ -12,6 +12,6 @@ RUN feast apply
 # GENERATE INPUT DATA
 COPY generate.py .
 # RUN TEST
-COPY run.py .
+COPY run_ray.py .
 CMD /bin/bash
 

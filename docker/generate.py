@@ -30,8 +30,8 @@ entities=generate_entities(1000000)
 
 entity_df = pd.DataFrame(data=entities, columns=['entity_id'])
 entity_df["event_timestamp"]=datetime(2021, 1, 14, 23, 59, 42, tzinfo=timezone.utc)
-#entity_df=entity_df[entity_df.entity_id == 100]
-entity_df=entity_df[entity_df.entity_id < 500]
+entity_df=entity_df[entity_df.entity_id == 100]
+#entity_df=entity_df[entity_df.entity_id < 500]
 entity_df.to_parquet('./dataset/entity_df.parquet')
 
 all_data=[]

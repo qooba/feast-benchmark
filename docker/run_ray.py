@@ -1,9 +1,9 @@
 from feast import FeatureStore
 import pandas as pd
-
-import ray
-from ray.util.dask import ray_dask_get
 import time
+import ray
+import dask
+from ray.util.dask import ray_dask_get
 ray.init()
 dask.config.set(scheduler=ray_dask_get)
 store = FeatureStore(repo_path=".")

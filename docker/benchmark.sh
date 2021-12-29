@@ -20,6 +20,6 @@ echo 'TEST DASK'
 docker run -it -v $(pwd)/dataset:/app/dataset qooba/feast:dask_test /bin/bash -c 'python3 run.py'
 
 echo 'TEST DASK ON RAY'
-docker run -it -v $(pwd)/dataset:/app/dataset qooba/feast:ray_test /bin/bash -c 'python3 run.py'
+docker run -it -v $(pwd)/dataset:/app/dataset --shm-size=5.09gb qooba/feast:ray_test /bin/bash -c 'python3 run_ray.py'
 
 
