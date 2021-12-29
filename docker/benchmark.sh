@@ -6,7 +6,7 @@ docker build -t qooba/feast:dask_test -f Dockerfile.dask_test .
 docker build -t qooba/feast:ray_test -f Dockerfile.ray_test .
 
 # GENERATE DATASET
-if [ ! -d "daaset" ]; then
+if [ ! -d "dataset" ]; then
   echo 'GENERATE DATASET'
   mkdir dataset
   docker run -it -v $(pwd)/dataset:/app/dataset qooba/feast:master_test /bin/bash -c 'python3 generate.py'
